@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/background">
+
+        <!-- Upper Relative Layout-->
+        <RelativeLayout
+            android:id="@+id/upper_part_layout"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+
+            <Button
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/moment_ok_btn"
+                android:text="완료"
+                android:background="#00ff0000"
+                style="?android:attr/borderlessButtonStyle"
+                />
+
+        </RelativeLayout>
+
+        <!--Middle Layout-->
+
+        <com.dogpalja.mobileapplication5.SquareImageView
+            android:id="@+id/moment_selected_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/upper_part_layout"
+            android:scaleType="centerCrop"
+            android:src="@drawable/captured_img"/>
+
+
+
+
+        <!-- Lower Relative Layout-->
+        <RelativeLayout
+            android:id="@+id/lower_part_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/moment_selected_photo"
+            android:background="@color/background"
+            android:padding="20dp"
+            >
+
+            <RelativeLayout
+                android:id="@+id/layout_btn_capture_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btn_capture_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="7dp"
+                    android:text="사진 촬영"
+                    android:textSize="15sp"
+                    android:gravity="left|center_vertical"
+                    android:textStyle="bold"
+                    android:background="@drawable/round_button_1"
+                    />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_alignRight="@+id/btn_capture_img"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/upload_hdpi"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/moment_comment_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/layout_btn_capture_img"
+                android:text="@string/inputString"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/picture_day"
+                android:layout_below="@+id/moment_comment_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textColor="@color/black" />
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
