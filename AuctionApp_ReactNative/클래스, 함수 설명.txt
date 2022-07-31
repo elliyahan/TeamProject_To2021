@@ -1,0 +1,25 @@
+1.로그인
+-fetchlogin(): db에 있는 로그인 관련 정보 불러오는 함수
+-_submit(): 회원가입시 입력한 정보들을 받아서 전달해주는 함수
+
+2.Auction
+-componentDidMount : 컴포넌트가 만들어지고 난 후 render를 거치고 실행되는 메소드.
+
+여기서 db 연동하기 위한 환경 설정, setTimeout, setInterval 및 AJAX 처리를 한다.
+
+-componentDidUpdate: 받은 정보들의 업데이트(render)가 완료되면 componentDidUpdate가 실행된다.
+
+여기서 componentDidUpdate는 이미 업데이트 된 상태이다, 따라서 바뀌기 이전의 정보와 그 후의 정보를 가지고 이음
+
+-fetchAuction(): 경매에 올릴 물건들의 정보를 db에서 받아오는 역할
+-fetchGetsAuction(): 경매에 올릴 물건들의 정보를 db에서 받아오면, 그것들을 화면의 뿌려주는 역할을함
+
+3.List My Product
+- fetchGetsProduct: 리스트에 보여줄 물건들의 정보를 db에서 받아오면, 그것들을 화면의 뿌려주는 역할을함
+
+4.Product Info
+-fetchAddProduct: 제품 등록창에서 제품정보를 입력하면, db에 전달해줘서 저장을 도와주는 함수
+
+5.Bid
+-fetchBidAuction(): 입찰에 올릴 가격과 코멘트를 입력하면,  db에 전달해줘서 저장을 도와주는 함수
+-fetchGetsAuction(): 앞서올린 가격과 코멘트를 받아와서 화면에 뿌려주는 역할을 함
